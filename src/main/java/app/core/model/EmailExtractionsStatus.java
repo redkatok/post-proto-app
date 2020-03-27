@@ -5,17 +5,18 @@ import java.time.LocalDateTime;
 public class EmailExtractionsStatus {
 
     private int id;
-    private String emailBox;
-    private LocalDateTime saveTime;
+    private String emailBoxAddress;
+    private LocalDateTime emailLocalDateTime;
 
     public EmailExtractionsStatus() {
     }
 
-    public EmailExtractionsStatus(int id, String emailBox, LocalDateTime saveTime) {
+    public EmailExtractionsStatus(int id, String emailBoxAddress, LocalDateTime emailLocalDateTime) {
         this.id = id;
-        this.emailBox = emailBox;
-        this.saveTime = saveTime;
+        this.emailBoxAddress = emailBoxAddress;
+        this.emailLocalDateTime = emailLocalDateTime;
     }
+
 
     public int getId() {
         return id;
@@ -25,19 +26,20 @@ public class EmailExtractionsStatus {
         this.id = id;
     }
 
-    public String getEmailBox() {
-        return emailBox;
+    public String getEmailBoxAddress() {
+        return emailBoxAddress;
     }
 
-    public void setEmailBox(String emailBox) {
-        this.emailBox = emailBox;
+    public void setEmailBoxAddress(String emailBoxAddress) {
+        this.emailBoxAddress = emailBoxAddress;
     }
 
-    public LocalDateTime getSaveTime() {
-        return saveTime;
+    public LocalDateTime getEmailLocalDateTime() {
+        return emailLocalDateTime;
     }
 
-    public void setSaveTime(LocalDateTime saveTime) {
-        this.saveTime = saveTime;
+    public void setEmailLocalDateTime(LocalDateTime emailLocalDateTime) {
+        this.emailLocalDateTime = emailLocalDateTime;
     }
+
 }

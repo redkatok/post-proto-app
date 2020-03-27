@@ -7,6 +7,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.time.LocalDateTime;
+
 @SpringBootApplication
 public class App implements CommandLineRunner {
     @Autowired
@@ -17,9 +19,9 @@ public class App implements CommandLineRunner {
     }
 
     @Override
-    public void run(String... args) throws Exception {
-//        statusService.insert(new EmailExtractionsStatus(1,"server1", LocalDateTime.now()));
+    public void run(String... args) {
+        emailStatusRepo.insert(new EmailExtractionsStatus(1,"server1", LocalDateTime.now()));
         EmailExtractionsStatus status=emailStatusRepo.checkStatus("server1");
-        System.out.println(status.getSaveTime());
+        System.out.println(status.getEmailLocalDateTime());
     }
 }
