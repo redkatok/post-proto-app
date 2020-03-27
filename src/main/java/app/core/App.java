@@ -20,8 +20,9 @@ public class App implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
+
         emailStatusRepo.insert(new EmailExtractionsStatus(1,"server1", LocalDateTime.now()));
         EmailExtractionsStatus status=emailStatusRepo.checkStatus("server1");
-        System.out.println(status.getEmailLocalDateTime());
+       System.out.println(status.getEmailLocalDateTime());
     }
 }
